@@ -2,10 +2,11 @@ services:
   - type: web
     name: soc2-control-tracker-api
     env: python
+    pythonVersion: 3.11
     plan: free
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn -w 1 -b 0.0.0.0:$PORT app.main:app --worker-class uvicorn.workers.UvicornWorker
     healthCheckPath: /docs
     envVars:
       - key: DATABASE_URL
