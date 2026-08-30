@@ -1,0 +1,14 @@
+{
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist",
+  "env": {
+    "VITE_API_MODE": "live",
+    "VITE_API_URL": "@soc2-api-url"
+  },
+  "envVars": [
+    {
+      "key": "VITE_API_URL",
+      "value": "https://soc2-control-tracker-api.onrender.com"
+    }
+  ]
+}
