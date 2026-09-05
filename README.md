@@ -6,8 +6,11 @@ reviews, and more. Built after leading the engineering side of a SOC 2 audit
 and wanting a lightweight way to see control status and audit-readiness at a
 glance, instead of tracking it in a spreadsheet.
 
-**Live demo:** runs entirely client-side against bundled sample data — no
-backend required. See `frontend/` below.
+**Live demo:** <https://jaysingh10406.github.io/soc2-control-tracker/>
+
+The deployed demo runs entirely client-side against bundled sample data —
+no backend required, and changes reset on reload. To persist data, run the
+FastAPI backend as described below.
 
 ## Stack
 
